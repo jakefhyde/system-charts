@@ -11,7 +11,7 @@ metadata:
     helm.sh/chart: {{ include "rancher-cis-benchmark.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-    run: sonobuoy-master
+    sonobuoy-component: aggregator
 spec:
   serviceAccountName: s-sa-{{ .Release.Name }}
   terminationGracePeriodSeconds: 0
